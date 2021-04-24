@@ -7,7 +7,7 @@ from scipy.io import wavfile
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-plt.style.use('dark_background') # comment out for "light" theme
+plt.style.use('dark_background')  # comment out for "light" theme
 plt.rcParams["font.size"] = 16
 
 
@@ -177,6 +177,7 @@ fig, ax = plt.subplots(figsize=(16, 8))
 container = ax.bar(np.arange(0, len(arr), 1),
                    arr.full_copies[0], align="edge", width=0.8)
 fig.suptitle(f"{sorter} sort")
+ax.set(xlabel="Index", ylabel="Value")
 ax.set_xlim([0, N])
 txt = ax.text(0.01, 0.99, "", ha="left", va="top", transform=ax.transAxes)
 
