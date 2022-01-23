@@ -198,6 +198,9 @@ def update(frame):
 
     return (txt, *container)
 
+if __name__ == "__main__":
 
-ani = FuncAnimation(fig, update, frames=range(len(arr.full_copies)),
-                    blit=True, interval=1000./FPS, repeat=False)
+    ani = FuncAnimation(fig, update, frames=range(len(arr.full_copies)),
+                        blit=True, interval=1000./FPS, repeat=False)
+
+    plt.show()
